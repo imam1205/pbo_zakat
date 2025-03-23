@@ -13,3 +13,14 @@ def connect_db():
         print(f"Error: Gagal koneksi ke database - {str(e)}")
         exit(1)
 
+def create_beras_table():
+    cursor = db.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS beras (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            harga DECIMAL(10,2)
+        )
+    ''')
+    db.commit()
+
+#beras db
