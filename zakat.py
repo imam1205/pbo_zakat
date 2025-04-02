@@ -1,4 +1,5 @@
 import mysql.connector
+import pandas as pd
 from datetime import datetime
 
 def connect_db():
@@ -25,7 +26,6 @@ def create_beras_table():
     db.commit()
 
 #beras db
-
 def tambah_data_beras():
     db = connect_db()
     cursor = db.cursor()
